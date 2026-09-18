@@ -1,11 +1,158 @@
+```html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Macachín - La Pampa</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background-color:#f3e5d0;color:#4a3328;line-height:1.7}
+h1,h2,h3{font-weight:normal}
+section{padding:90px 8%}
+.boton{display:inline-block;padding:14px 30px;background-color:#8f5f55;color:white;text-decoration:none;border-radius:30px;font-size:16px;transition:.3s}
+.boton:hover{background-color:#6f463f;transform:translateY(-3px)}
+.inicio{min-height:100vh;background:linear-gradient(rgba(60,40,30,.45),rgba(60,40,30,.55)),url("macachin.jpg");background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;text-align:center;color:white}
+.inicio-contenido{max-width:800px}
+.inicio h1{font-size:clamp(45px,8vw,90px);margin-bottom:20px;letter-spacing:2px}
+.inicio p{font-size:21px;margin-bottom:35px}
+.historia{background-color:#f3e5d0}
+.titulo-seccion{text-align:center;margin-bottom:60px}
+.titulo-seccion h2{font-family:Georgia,serif;font-style:italic;font-size:48px;color:#70483e;margin-bottom:10px}
+.titulo-seccion span{font-size:18px;font-weight:bold;letter-spacing:4px;color:#8f5f55}
+.historia-contenido{display:grid;grid-template-columns:1fr 1.2fr;gap:60px;align-items:center;max-width:1200px;margin:auto}
+.historia-imagen img{width:100%;height:450px;object-fit:cover;border-radius:20px;box-shadow:0 10px 30px rgba(70,45,35,.2)}
+.historia-texto p{margin-bottom:20px;font-size:17px}
+.cultura{background-color:#fffaf3}
+.cultura-header{text-align:center;margin-bottom:50px}
+.cultura-header h2{font-family:Georgia,serif;font-style:italic;font-size:48px;color:#70483e}
+.tarjetas{max-width:1200px;margin:auto;display:grid;grid-template-columns:repeat(2,1fr);gap:30px}
+.tarjeta{background-color:#f3e5d0;padding:35px;border-radius:18px;border:1px solid rgba(112,72,62,.15);transition:.3s}
+.tarjeta:hover{transform:translateY(-5px);box-shadow:0 10px 25px rgba(70,45,35,.15)}
+.tarjeta h3{font-family:Georgia,serif;font-size:27px;color:#70483e;margin-bottom:15px}
+.tarjeta p{margin-bottom:10px}
+.tarjeta ul{padding-left:22px}
+.tarjeta li{margin-bottom:5px}
+.ubicacion{background-color:#d8b8a8}
+.ubicacion-contenido{max-width:1100px;margin:auto;display:grid;grid-template-columns:1fr 1.3fr;gap:50px;align-items:center}
+.ubicacion-texto h2{font-family:Georgia,serif;font-style:italic;font-size:48px;color:#593b32;margin-bottom:30px}
+.datos{display:flex;flex-direction:column;gap:15px}
+.dato{background-color:rgba(255,250,243,.65);padding:15px 20px;border-radius:10px}
+.dato strong{color:#70483e}
+.mapa{width:100%;height:400px;background-color:#eee0ce;border-radius:20px;display:flex;align-items:center;justify-content:center;text-align:center;box-shadow:0 10px 30px rgba(70,45,35,.15)}
+.mapa p{font-family:Georgia,serif;font-size:22px;color:#70483e}
+.visitar{min-height:500px;background-color:#70483e;color:white;text-align:center;display:flex;align-items:center;justify-content:center}
+.visitar-contenido{max-width:800px}
+.visitar h2{font-family:Georgia,serif;font-style:italic;font-size:clamp(40px,6vw,65px);margin-bottom:25px}
+.visitar p{font-size:18px;line-height:1.8}
+footer{background-color:#4a3328;color:#f3e5d0;text-align:center;padding:25px}
+@media(max-width:800px){
+section{padding:70px 6%}
+.historia-contenido,.ubicacion-contenido{grid-template-columns:1fr}
+.tarjetas{grid-template-columns:1fr}
+.historia-imagen img{height:300px}
+.inicio h1{font-size:50px}
+.titulo-seccion h2,.cultura-header h2,.ubicacion-texto h2{font-size:38px}
+}
+</style>
 </head>
 <body>
-    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat at praesentium asperiores recusandae eveniet aperiam nulla explicabo eaque similique facilis velit quos quis corrupti, quasi delectus necessitatibus minima, voluptas ipsum!</h1>
+<section class="inicio" id="inicio">
+<div class="inicio-contenido">
+<h1>Macachín - La Pampa</h1>
+<p>Descubrí la historia, cultura y tradiciones de una localidad con una fuerte herencia vasca.</p>
+<a href="#historia" class="boton">Descubrí Macachín</a>
+</div>
+</section>
+<section class="historia" id="historia">
+<div class="titulo-seccion">
+<h2>Sobre nuestra historia</h2>
+<span>HISTORIA</span>
+</div>
+<div class="historia-contenido">
+<div class="historia-imagen">
+<img src="macachin-historia.jpg" alt="Imagen de Macachín">
+</div>
+<div class="historia-texto">
+<p>Macachín fue fundado oficialmente el <strong>20 de noviembre de 1902</strong> por Jorge Moore, Luis Brunel y José Fratini, quienes impulsaron el desarrollo de la localidad mediante la creación de la sociedad “Jorge Moore y Cía.”.</p>
+<p>Antes de su fundación, la región estaba habitada por pueblos originarios mapuches y tuvo un papel importante durante la Conquista del Desierto.</p>
+<p>Un momento clave en el crecimiento del pueblo fue la llegada del <strong>ferrocarril en 1909</strong>, que impulsó el comercio, mejoró la comunicación con otras localidades y favoreció el desarrollo económico.</p>
+<p>Con el paso de los años, Macachín incorporó nuevos servicios, comercios e instituciones, consolidándose como una de las localidades más importantes del sur de La Pampa.</p>
+<p>Además, conserva una fuerte herencia vasca, presente en sus tradiciones, su arquitectura y sus celebraciones culturales.</p>
+</div>
+</div>
+</section>
+<section class="cultura" id="cultura">
+<div class="cultura-header">
+<h2>Cultura y Tradiciones</h2>
+</div>
+<div class="tarjetas">
+<article class="tarjeta">
+<h3>Influencia vasca</h3>
+<p>Macachín se destaca por su importante comunidad de descendientes de inmigrantes vascos, que mantiene vivas sus tradiciones mediante instituciones, encuentros culturales y festividades.</p>
+</article>
+<article class="tarjeta">
+<h3>Fiestas populares</h3>
+<ul>
+<li>Fiesta Provincial de la Alfalfa y el Ternero.</li>
+<li>Aniversario de la fundación de Macachín (20 de noviembre).</li>
+<li>Encuentros gastronómicos y culturales organizados por la comunidad vasca.</li>
+<li>Festivales de danzas.</li>
+</ul>
+</article>
+<article class="tarjeta">
+<h3>Danzas</h3>
+<p>Se practican danzas folclóricas argentinas, como el <strong>gato</strong> y la <strong>chacarera</strong>, además de danzas tradicionales vascas presentadas en festivales y celebraciones.</p>
+</article>
+<article class="tarjeta">
+<h3>Gastronomía típica</h3>
+<p>La gastronomía combina platos tradicionales argentinos con comidas de origen vasco que suelen prepararse durante las celebraciones de la colectividad.</p>
+<p>Entre ellas se destacan:</p>
+<ul>
+<li>Asado</li>
+<li>Empanadas</li>
+<li>Locro</li>
+<li>Paella</li>
+<li>Bacalao</li>
+<li>Tortilla española</li>
+<li>Pintxos</li>
+<li>Guisos y postres tradicionales</li>
+</ul>
+</article>
+<article class="tarjeta">
+<h3>Costumbres</h3>
+<p>Los vecinos participan activamente en fiestas locales, como el aniversario del pueblo y la Fiesta Provincial de la Alfalfa y el Ternero.</p>
+<p>También forman parte de eventos deportivos, como torneos de fútbol, bochas y otras disciplinas organizadas por los clubes locales.</p>
+<p>Además, participan en actividades culturales como espectáculos de música y danzas folclóricas y vascas, ferias de artesanos y encuentros de la comunidad.</p>
+<p>Estas actividades ayudan a mantener vivas las tradiciones e impulsar la vida comunitaria.</p>
+</article>
+</div>
+</section>
+<section class="ubicacion" id="ubicacion">
+<div class="ubicacion-contenido">
+<div class="ubicacion-texto">
+<h2>¿Dónde está?</h2>
+<div class="datos">
+<div class="dato"><strong>País:</strong> Argentina</div>
+<div class="dato"><strong>Provincia:</strong> La Pampa</div>
+<div class="dato"><strong>Departamento:</strong> Atreucó</div>
+<div class="dato"><strong>Ubicación:</strong> En el centro-este de La Pampa, cerca del límite con la provincia de Buenos Aires.</div>
+</div>
+</div>
+<div class="mapa">
+<p>MAPA<br><small>Ubicación de Macachín</small></p>
+</div>
+</div>
+</section>
+<section class="visitar" id="visitar">
+<div class="visitar-contenido">
+<h2>¿Por qué deberías visitar Macachín?</h2>
+<p>Macachín reúne historia, cultura y tradiciones que forman parte de la identidad de la localidad. Su herencia vasca, sus fiestas populares, su gastronomía, sus danzas y su vida comunitaria permiten conocer una parte característica de La Pampa.</p>
+</div>
+</section>
+<footer>
+<p>Macachín - La Pampa</p>
+</footer>
 </body>
 </html>
